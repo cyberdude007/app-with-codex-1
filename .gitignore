@@ -6,3 +6,12 @@ app/build/
 # IDE
 .idea/
 *.iml
+# Gradle wrapper
+gradle/
+gradlew
+gradlew.bat
+
+# Build outputs
+*.apk
+*.aab
+*.jar

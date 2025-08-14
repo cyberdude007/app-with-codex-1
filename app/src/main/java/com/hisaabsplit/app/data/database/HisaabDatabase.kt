@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
+import com.hisaabsplit.app.data.database.dao.*
 import com.hisaabsplit.app.data.database.entities.*
 import net.sqlcipher.database.SupportFactory
 
@@ -25,6 +26,15 @@ import net.sqlcipher.database.SupportFactory
 )
 @TypeConverters(Converters::class)
 abstract class HisaabDatabase : RoomDatabase() {
+    abstract fun accountDao(): AccountDao
+    abstract fun categoryDao(): CategoryDao
+    abstract fun labelDao(): LabelDao
+    abstract fun groupDao(): GroupDao
+    abstract fun memberDao(): MemberDao
+    abstract fun transactionDao(): TransactionDao
+    abstract fun splitDao(): SplitDao
+    abstract fun ledgerEntryDao(): LedgerEntryDao
+    abstract fun settlementDao(): SettlementDao
 
     companion object {
         @Volatile
